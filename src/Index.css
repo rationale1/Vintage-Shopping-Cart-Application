@@ -1,0 +1,53 @@
+/*================= Resets =================*/
+html {
+  /* font-size: 62.5%; */
+  overflow-x: hidden;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+
+  border: none;
+  outline: none;
+  text-decoration: none;
+  list-style-type: none;
+  text-transform: capitalize;
+  transition: all 0.7s ease-in-out;
+}
+
+/*================= Base Style =================*/
+body {
+  line-height: 1.5;
+  font-family: sans-serif;
+}
+
+img {
+  height: auto;
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  max-width: 81.25rem;
+  margin: 0 auto;
+}
+
+.inside__container {
+  max-width: 80.25rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/*================= Variables =================*/
+:root {
+  --border: 1px solid red;
+  --border1: 1px solid green;
+  --shadow: 0 0 3px 4px rgba(0, 0, 0, 0.3);
+  --transition: all 0.2s ease-in-out;
+}

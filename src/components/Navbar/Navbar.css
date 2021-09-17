@@ -1,0 +1,164 @@
+.nav-flex {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+header {
+  background: teal;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: var(--shadow);
+}
+
+.navbar {
+  /* border: var(--border); */
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0.7rem 1.5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*----------- Nav__logo ---------*/
+.logo__img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.logo__img img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.navbar__title {
+  font-style: oblique;
+  font-size: 25px;
+  color: #fff;
+}
+
+.navbar__title span {
+  color: red;
+  font-size: 30px;
+}
+
+/*----------- Nav__links ---------*/
+.navbar__links {
+  position: relative;
+}
+
+.navbar__list {
+  font-size: 18px;
+  gap: 2rem;
+}
+
+.navbar__list a {
+  color: #fff;
+  transition: var(--transition);
+}
+
+.navbar__list a:hover {
+  color: tomato;
+}
+
+.navbar__btn {
+  display: none;
+}
+
+/*----------- Nav__cart ---------*/
+
+.navbar__cart {
+  color: #fff;
+  position: relative;
+  padding: 1rem;
+}
+
+.navbar__cart .count {
+  position: absolute;
+  top: 0;
+  right: 0.5rem;
+  font-size: 1.1rem;
+  background-color: red;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem;
+  transition: all 0.5s ease-in-out;
+  transform: scale(0.8);
+}
+
+.navbar__cart .count:hover {
+  transform: scale(1.3);
+}
+
+/*----------- Nav__menu ---------*/
+.navbar__menu {
+  display: none;
+}
+
+.fa {
+  cursor: pointer;
+  color: #fff;
+  font-size: 25px;
+  transition: var(--transition);
+}
+
+.fa:hover {
+  color: tomato;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar__menu {
+    display: initial;
+  }
+  .navbar__links {
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25rem;
+    height: 100vh;
+    padding: 1.5rem;
+    background: black;
+    transition: all 0.7s ease-in-out;
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  .navbar__links.open {
+    transform: translateX(0);
+    opacity: 0.9;
+  }
+
+  .navbar__list {
+    padding: 1rem;
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  .navbar__btn {
+    display: initial;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    transition: all 300ms ease-in-out;
+  }
+
+  .navbar__btn:hover {
+    transform: rotate(180deg);
+  }
+
+  .navbar__items:hover {
+    transform: translateY(-7px);
+  }
+}
+
+/* 58:25 */

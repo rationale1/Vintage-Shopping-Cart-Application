@@ -1,0 +1,118 @@
+.cart__title {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.cart__center {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 3fr 1fr;
+  margin-bottom: 3rem;
+}
+
+.cart__item {
+  columns: 1 / span 2;
+  display: flex;
+  flex-flow: column;
+  gap: 1.5rem;
+}
+
+.cart__info {
+  border-radius: 0.3rem;
+  background-color: rgb(236, 236, 236);
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.7rem;
+}
+
+.cart__img {
+  width: 80px;
+  height: 60px;
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+
+.cart__img img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.cart__info p {
+  font-weight: 700;
+  font-size: 18px;
+  /* color: crimson; */
+  letter-spacing: 0.1rem;
+}
+
+/*============== Cart Details ==============*/
+
+.cart__details {
+  height: 250px;
+  background: teal;
+  padding: 1rem;
+}
+
+.cart__details > * {
+  margin: 1rem 0;
+  color: #fff;
+}
+
+.cart__details h3 {
+  letter-spacing: 0.1rem;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.cart__details p {
+  font-size: 1.2rem;
+}
+
+.cart__details span {
+  letter-spacing: 0.1rem;
+
+  color: gold;
+  font-style: italic;
+}
+
+.cart__details .free {
+  color: red;
+}
+
+/*========== Cart Buttons =========*/
+.cart__buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.cart__buttons span {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.cart__btn {
+  cursor: pointer;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 1px solid lightgray;
+}
+
+/*============= Cart Trashcan =============*/
+.cart__trashcan {
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.cart__trashcan:hover {
+  transform: scale(1.1);
+}
+
+/*============= Media Query =============*/
+@media (max-width: 768px) {
+  .cart__center {
+    grid-template-columns: 1fr;
+  }
+}
